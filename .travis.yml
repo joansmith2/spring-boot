@@ -1,8 +1,9 @@
+---
 language: java
 jdk:
-  - openjdk7
-  - oraclejdk8
+- openjdk7
+- oraclejdk8
 services: mongodb
-
-install: mvn install -q -U -DskipTests=true -Dmaven.test.redirectTestOutputToFile=true -P spring-snapshot
+install: mvn install -q -U -DskipTests=true -Dmaven.test.redirectTestOutputToFile=true
+  -P spring-snapshot
 script: mvn install -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'
